@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend repo for notes App",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build:ui": "rm -rf build && cd ../../part2/notes && npm run build && cp -r build ../../part3/notesBackEnd",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Musaab A",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.3.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
